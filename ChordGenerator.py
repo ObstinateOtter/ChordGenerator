@@ -130,20 +130,33 @@ def possibleChords(scl):
 
 while True:
     inp = input("\n\nEnter the scale for which you want to find the notes[eg: C or Cm]: ")
-    rt = inp[0].upper()
+    if inp[1] == '#':
+        accidentalPresent = True
+        rt = inp[0:2].upper()
+    else:
+        accidentalPresent = False
+        rt = inp[0].upper()
 
-    if inp[-1] == 'm':
-        k = 'm'
-        ti = rt + ' Minor'
-    elif inp[-1] == rt or inp[-1] == 'M':
-        k = "M"  
-        ti = rt + ' Major'
+    if accidentalPresent:
+        if inp[-1] == 'm':
+            k = 'm'
+            ti = rt + ' Minor'
+        elif inp[0:2] == rt or inp[-1] == 'M':
+            k = "M"  
+            ti = rt + ' Major'
+    else:
+        if inp[-1] == 'm':
+            k = 'm'
+            ti = rt + ' Minor'
+        elif inp[-1] == rt or inp[-1] == 'M':
+            k = "M"  
+            ti = rt + ' Major'
     
 
     if rt not in ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#']:
         print("\n\tMusical notes only range from A to G.\n ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#']\n")
     elif k not in ['M','m']:
-            print("\n\tMake sure you enter only 'M' or 'm'\n")
+        print("\n\tMake sure you enter only 'M' or 'm'\n")
     
     else:
         notes = scale(rt,k)
