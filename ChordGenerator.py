@@ -73,7 +73,7 @@ def fancyPrint(L,r):
     hd.insert(0,'Notes of the Scale: ')
 
 
-    print(f'\n\tChords present in the {r} scale\n')
+    print(f'\n\t\t\tChords present in the {r} scale\n')
     print(tabulate(data,hd,tablefmt='fancy_grid',stralign='center'))
 
 
@@ -130,7 +130,7 @@ def possibleChords(scl):
 
 while True:
     inp = input("\n\nEnter the scale for which you want to find the notes[eg: C or Cm]: ")
-    if inp[1] == '#':
+    if inp[1:2] == '#':
         accidentalPresent = True
         rt = inp[0:2].upper()
     else:
