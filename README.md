@@ -1,5 +1,15 @@
 # ChordGenerator
 
-## This program takes the root note of a scale, finds all the available notes in that key, and generates a list of chords which fit the scale.
+**ChordGenerator** is a tool that takes the root note of a musical scale, identifies all the notes within that key, and generates a list of chords that fit perfectly within the scale.
 
-###### *As of now only major,minor,diminished,maj7,min7,sus2 and sus4 chords are generated from a given scale. More chords to be added sooner.*
+Currently, the program supports generating the following chord types from any given scale:
+
+- Major  
+- Minor  
+- Diminished  
+- Major 7th (maj7)  
+- Minor 7th (min7)  
+- Suspended 2nd (sus2)  
+- Suspended 4th (sus4)
+
+*More chord types will be added soon!*

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chord Finder</title>
+        <link rel="stylesheet" href="ChordFinder.css"/>
+        <script src="ChordFinder.js"></script>
+    </head>
+    <body>
+        <h1>Chord Finder</h1>
+        <div class="c_drop">
+            <p class="title">Scale: </p>
+            <select id="note" onchange="updateWindow()">
+                <option id="note-C" value="C">C</option>
+                <option id="note-C#" value="C#">C#</option>
+                <option id="note-D" value="D">D</option>
+                <option id="note-D#" value="D#">D#</option>
+                <option id="note-E" value="E">E</option>
+                <option id="note-F" value="F">F</option>
+                <option id="note-F#" value="F#">F#</option>
+                <option id="note-G" value="G">G</option>
+                <option id="note-G#" value="G#">G#</option>
+                <option id="note-A" value="A">A</option>
+                <option id="note-A#" value="A#">A#</option>
+                <option id="note-B" value="B">B</option>
+            </select> 
+            <select id="mode" onchange="updateWindow()">
+                <option id="Major" value="Major">Major</option>
+                <option id="Minor" value="Minor">Minor</option>
+            </select>
+        </div>
+
+            <p id="current" class="current">Chords for C Major</p>
+        
+        <div class="c_table">
+            <table id="chordTable">
+                <tr>
+                    <th>Notes of the Scale:</th>
+                    <th id="note-1">C</th>
+                    <th id="note-2">D</th>
+                    <th id="note-3">E</th>
+                    <th id="note-4">F</th>
+                    <th id="note-5">G</th>
+                    <th id="note-6">A</th>
+                    <th id="note-7">B</th>
+                </tr>
+                <tr>
+                    <th id="head">maj/min/dim Chords:</th>
+                    <td id="majmin-1">C</td>
+                    <td id="majmin-2">Dm</td>
+                    <td id="majmin-3">Em</td>
+                    <td id="majmin-4">F</td>
+                    <td id="majmin-5">G</td>
+                    <td id="majmin-6">Am</td>
+                    <td id="majmin-7">Bdim</td>
+                </tr>
+                <tr>
+                    <th>maj7/min7 Chords:</th>
+                    <td id="maj7-1">Cmaj7</td>
+                    <td id="maj7-2">Dmin7</td>
+                    <td id="maj7-3">Emin7</td>
+                    <td id="maj7-4">Fmaj7</td>
+                    <td id="maj7-5">---</td>
+                    <td id="maj7-6">Amin7</td>
+                    <td id="maj7-7">---</td>
+                </tr>
+                <tr>
+                    <th>sus2 Chords:</th>
+                    <td id="sus2-1">Csus2</td>
+                    <td id="sus2-2">Dsus2</td>
+                    <td id="sus2-3">---</td>
+                    <td id="sus2-4">Fsus2</td>
+                    <td id="sus2-5">Gsus2</td>
+                    <td id="sus2-6">Asus2</td>
+                    <td id="sus2-7">---</td>
+                </tr>
+                <tr>
+                    <th>sus4 Chords:</th>
+                    <td id="sus4-1">Csus4</td>
+                    <td id="sus4-2">Dsus4</td>
+                    <td id="sus4-3">Esus4</td>
+                    <td id="sus4-4">---</td>
+                    <td id="sus4-5">Gsus4</td>
+                    <td id="sus4-6">Asus4</td>
+                    <td id="sus4-7">---</td>
+                </tr>
+            </table>
+            
+        </div>
+    </body>
+    </html>

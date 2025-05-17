@@ -1,0 +1,151 @@
+:root{
+    --dark: #09122C;
+    --accent: #E17564;
+    --prim: #BE3144;
+    --sec: #872341;
+    --tabHead: #09102894;
+    --tabDat: #0a122a95;
+}
+
+@font-face{
+    font-family: "LexendDeca";
+    src: url("./fonts/LexendDeca-VariableFont_wght.ttf");
+    font-weight: 100 900;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 3px var(--prim);
+  }
+  20% {
+    text-shadow: 0 0 6px var(--prim);
+  }
+  40% {
+    text-shadow: 0 0 9px var(--prim);
+  }
+  60% {
+    text-shadow: 0 0 9px var(--prim);
+  }
+  80% {
+    text-shadow: 0 0 6px var(--prim);
+  }
+}
+
+body{
+    background: radial-gradient(circle, #0e1b42 0%, #211928 100%);
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 20%;
+    margin-left:  20%;
+    padding-top:    2%;
+    padding-bottom: 2%;
+    color: var(--prim);
+    text-shadow: 0px 0px 8px var(--prim);
+    background:  rgba(81, 86, 90, 0.15);
+    border: solid rgba(81, 86, 90, 0.15) 1px;
+    border-radius: 30px;
+    font-family: LexendDeca;
+    animation: pulseGlow 10s infinite  alternate-reverse ease-in-out;
+}
+
+p.title{
+    font-size: 25px;
+    font-weight: 300;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: var(--accent);
+    font-family: LexendDeca;
+}
+
+p.current{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--accent);
+    font-family: LexendDeca;
+}
+
+select{
+    font-size: 20px;
+    font-weight: 350;
+    font-family: LexendDeca;
+    color: var(--accent);
+    border: solid;
+    border-color: var(--sec);
+    background-color: var(--sec);
+    margin-left: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    transition: 0.1s ease-in-out;
+}
+
+select:hover{
+    border: solid;
+    border-color:var(--accent);
+    transform: scale(1.05);
+}
+
+select option{
+    font-weight: 200;
+    color: var(--accent);
+    background-color: var(--sec);
+
+}
+
+div.c_table {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+div.c_drop {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top:30px;
+    margin-bottom:10px;
+    margin-left:    40%;
+    margin-right:   40%;
+    border-radius: 40px; 
+    background-color: var(--dark);
+}
+
+
+table {
+    color: white;
+    border: 5px solid var(--accent);
+    border-collapse: collapse;
+}
+
+th {
+    color: #bd325ce3;
+    background-color: var(--tabHead);
+    padding:8px;
+    border: 5px solid var(--accent);
+    border-collapse: collapse;
+    text-align: center;
+    font-family: LexendDeca;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+td {
+    color: #c16ba5;
+    background-color: var(--tabDat);
+    padding:8px;
+    border: 3px solid var(--accent);
+    border-collapse: collapse;
+    text-align: center;
+    font-family: LexendDeca;
+    font-weight: 250;
+    font-size: 30px;
+}
